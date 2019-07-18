@@ -1,24 +1,16 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+This application is meant to be a starter Rails app for Mod2 students to practice CRUDing resources, and using sessions to give state to the HTTP cycle.
 
-Things you may want to cover:
+## Setup
 
-* Ruby version
+To get started with this blank rails app, clone the repository and run `bundle install`.  
 
-* System dependencies
+All of the gems you need to get started are included: rails-rspec, capybara, pry, launchy, and shoulda-matchers.
 
-* Configuration
+## Use
 
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+Use this blank repo to practice CRUDing resources.
+* CRUD a single resource.
+* CRUD two resources with a one-to-many relationship.
+* CRUD two resources with a many-to-many relationship.
