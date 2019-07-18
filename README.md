@@ -14,3 +14,5 @@ Use this blank repo to practice CRUDing resources.
 * CRUD a single resource.
 * CRUD two resources with a one-to-many relationship.
 * CRUD two resources with a many-to-many relationship.
+
+Currently, there are no database tables set up - you should start these resources from scratch!
