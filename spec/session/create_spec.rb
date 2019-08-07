@@ -16,6 +16,21 @@ RSpec.describe "User can Login", type: :feature do
         expect(current_path).to eq(user_dashboard_path)
         expect(page).to have_content("Sales Dashboard Page")
       end
+
+      it "If I am a Manager User, I am redirected to my dashboard page" do
+        user = User.create!(name: "Sam", email: "email@gmail.com", password: "test", role: 1)
+
+        visit login_path
+
+        fill_in "User Name", with: "email@gmail.com"
+        fill_in "Password", with: "test"
+
+        click_button "Login"
+
+        expect(current_path).to eq(manager_dashboard_path)
+        expect(page).to have_content("Manager Dashboard Page")
+      end
+
     end
   end
 end
