@@ -8,6 +8,6 @@ Rails.application.routes.draw do
 
   get '/admin/dashboard', to: 'admin/dashboard#show', as: :admin_dashboard
   get '/manager/dashboard', to: 'manager/dashboard#show', as: :manager_dashboard
-  get '/user/dashboard', to: 'users#show', as: :user_dashboard_path
+  get '/user/dashboard', to: 'users#show', as: :user_dashboard
 
 end
