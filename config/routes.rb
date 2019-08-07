@@ -11,6 +11,6 @@ Rails.application.routes.draw do
 
   get '/manager/dashboard', to: 'manager/dashboard#show', as: :manager_dashboard
 
-  get '/user/dashboard', to: 'user/dashboard#show', as: :user_dashboard_path
+  get '/user/dashboard', to: 'users#show', as: :user_dashboard_path
 
 end
