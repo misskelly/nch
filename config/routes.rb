@@ -6,4 +6,11 @@ Rails.application.routes.draw do
   delete '/logout', to: 'users#logout', as: :logout
 
   post '/login', to: 'sessions#create'
+
+  get '/admin/dashboard', to: 'admin#show', as: :admin_dashboard
+
+  get '/manager/dashboard', to: 'manager#show', as: :manager_dashboard
+
+  get '/user/dashboard', to: 'users#show', as: :user_dashboard_path
+
 end
