@@ -1,6 +1,6 @@
-class DashboardController < ApplicationController
+class Admin::DashboardController < Admin::BaseController
 
   def show
   end
-  
+
 end
