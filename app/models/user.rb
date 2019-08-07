@@ -6,4 +6,5 @@ class User < ApplicationRecord
 
   enum role: ["sales", "manager", "admin"]
 
+  has_secure_password
 end
