@@ -10,10 +10,28 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_08_07_173630) do
+ActiveRecord::Schema.define(version: 2019_08_07_223135) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "surveys", force: :cascade do |t|
+    t.string "location"
+    t.integer "reservation_number"
+    t.string "date_of_survey"
+    t.string "professional_associates"
+    t.string "prompt_response"
+    t.string "appropreate_recommendation"
+    t.string "appropreate_instruction_paperwork"
+    t.string "move_in_experience"
+    t.string "clean_and_comfortable"
+    t.string "appropreate_furnishing"
+    t.string "bed_and_bedding"
+    t.string "would_use_again"
+    t.string "would_recommend"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
 
   create_table "users", force: :cascade do |t|
     t.string "name"
