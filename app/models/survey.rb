@@ -14,4 +14,6 @@ class Survey < ApplicationRecord
 
   validates :reservation_number, uniqueness: true, presence: true
 
+  
+
 end
