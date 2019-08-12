@@ -14,4 +14,8 @@ class Survey < ApplicationRecord
 
   validates :reservation_number, uniqueness: true, presence: true
 
+  def total_score(survey)
+
+  end
+
 end
