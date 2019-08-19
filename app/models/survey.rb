@@ -14,7 +14,7 @@ class Survey < ApplicationRecord
 
   validates :reservation_number, uniqueness: true, presence: true
 
-  # year_month needs to be like this 2018-01 no quotes
+  # year_month needs to be like this "2018-01"
   def self.selected_average_score(location, date_selected)
     a = Survey.where(location: location).where("date_of_survey like ?", "%#{date_selected}%")
     b = a.pluck(:professional_associates, :prompt_response,
