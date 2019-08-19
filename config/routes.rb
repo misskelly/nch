@@ -7,6 +7,7 @@ Rails.application.routes.draw do
   post '/login', to: 'sessions#create'
 
   get '/admin/dashboard', to: 'admin/dashboard#show', as: :admin_dashboard
+  get '/admin/data', to: 'admin/dashboard#index', as: :admin_data
   get '/manager/dashboard', to: 'manager/dashboard#show', as: :manager_dashboard
   get '/user/dashboard', to: 'user/dashboard#show', as: :user_dashboard
 

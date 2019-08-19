@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>Basic HTML Table</h2>
+
+<table style="width:90%">
+  <tr>
+    <th>Location</th>
+    <th>January</th>
+    <th>Febuary</th>
+    <th>March</th>
+    <th>April</th>
+    <th>May</th>
+    <th>June</th>
+    <th>July</th>
+    <th>August</th>
+    <th>September</th>
+    <th>October</th>
+    <th>November</th>
+    <th>December</th>
+    <th>Year: #{survey.year_selected}</th>
+  </tr>
+    <% @survey.each do |survey| %>
+    <tr><%= survey %></tr>
+    <% end %>
+  <tr>
+    <td>Eve</td>
+    <td>Jackson</td>
+    <td>94</td>
+  </tr>
+  <tr>
+    <td>John</td>
+    <td>Doe</td>
+    <td>80</td>
+  </tr>
+</table>
+
+</body>
+</html>
