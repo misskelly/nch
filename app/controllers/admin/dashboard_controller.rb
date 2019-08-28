@@ -4,7 +4,7 @@ class Admin::DashboardController < Admin::BaseController
   end
 
   def index
-    @survey = Survey.pluck(:location).uniq
+    @survey = Survey.all
   end
-
+  
 end

@@ -11,5 +11,10 @@ RSpec.describe "Admin Dashboard Page", type: :feature do
       visit admin_dashboard_path
       expect(page).to have_content("Admin Dashboard Page")
     end
+
+    it "index page" do
+      visit admin_data_path
+      save_and_open_page
+    end
   end
 end

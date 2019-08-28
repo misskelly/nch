@@ -1,40 +1,180 @@
-<!DOCTYPE html>
-<html>
-<body>
-
-<h2>Basic HTML Table</h2>
-
-<table style="width:90%">
-  <tr>
-    <th>Location</th>
-    <th>January</th>
-    <th>Febuary</th>
-    <th>March</th>
-    <th>April</th>
-    <th>May</th>
-    <th>June</th>
-    <th>July</th>
-    <th>August</th>
-    <th>September</th>
-    <th>October</th>
-    <th>November</th>
-    <th>December</th>
-    <th>Year: #{survey.year_selected}</th>
-  </tr>
-    <% @survey.each do |survey| %>
-    <tr><%= survey %></tr>
-    <% end %>
-  <tr>
-    <td>Eve</td>
-    <td>Jackson</td>
-    <td>94</td>
-  </tr>
-  <tr>
-    <td>John</td>
-    <td>Doe</td>
-    <td>80</td>
-  </tr>
-</table>
-
+<body class="background-color-main">
+  <table style="width:100%">
+    <tr>
+      <th class="box-background-color">Location</th>
+      <th class="box-background-color">January</th>
+      <th class="box-background-color">Febuary</th>
+      <th class="box-background-color">March</th>
+      <th class="box-background-color">April</th>
+      <th class="box-background-color">May</th>
+      <th class="box-background-color">June</th>
+      <th class="box-background-color">July</th>
+      <th class="box-background-color">August</th>
+      <th class="box-background-color">September</th>
+      <th class="box-background-color">October</th>
+      <th class="box-background-color">November</th>
+      <th class="box-background-color">December</th>
+      <th class="box-background-color">Year: 2018</th>
+    </tr>
+    <tr>
+      <td class="box-background-color">Florida</td>
+      <td class="yellow"><%= @survey.selected_average_score("Florida", "2018-01") %></td>
+      <td class="yellow"><%= @survey.selected_average_score("Florida", "2018-02") %></td>
+      <td class="green"><%= @survey.selected_average_score("Florida", "2018-03") %></td>
+      <td class="green"><%= @survey.selected_average_score("Florida", "2018-04") %></td>
+      <td class="green"><%= @survey.selected_average_score("Florida", "2018-05") %></td>
+      <td class="green"><%= @survey.selected_average_score("Florida", "2018-06") %></td>
+      <td class="green"><%= @survey.selected_average_score("Florida", "2018-07") %></td>
+      <td class="green"><%= @survey.selected_average_score("Florida", "2018-08") %></td>
+      <td class="green"><%= @survey.selected_average_score("Florida", "2018-09") %></td>
+      <td class="green"><%= @survey.selected_average_score("Florida", "2018-10") %></td>
+      <td class="green"><%= @survey.selected_average_score("Florida", "2018-11") %></td>
+      <td class="green"><%= @survey.selected_average_score("Florida", "2018-12") %></td>
+      <td class="green"><%= @survey.selected_average_score("Florida", "2018") %></td>
+    </tr>
+    <tr>
+      <td class="box-background-color">Georgia</td>
+      <td class="green"><%= @survey.selected_average_score("Georgia", "2018-01") %></td>
+      <td class="green"><%= @survey.selected_average_score("Georgia", "2018-02") %></td>
+      <td class="green"><%= @survey.selected_average_score("Georgia", "2018-03") %></td>
+      <td class="green"><%= @survey.selected_average_score("Georgia", "2018-04") %></td>
+      <td class="green"><%= @survey.selected_average_score("Georgia", "2018-05") %></td>
+      <td class="green"><%= @survey.selected_average_score("Georgia", "2018-06") %></td>
+      <td class="green"><%= @survey.selected_average_score("Georgia", "2018-07") %></td>
+      <td class="green"><%= @survey.selected_average_score("Georgia", "2018-08") %></td>
+      <td class="green"><%= @survey.selected_average_score("Georgia", "2018-09") %></td>
+      <td class="green"><%= @survey.selected_average_score("Georgia", "2018-10") %></td>
+      <td class="yellow"><%= @survey.selected_average_score("Georgia", "2018-11") %></td>
+      <td class="yellow"><%= @survey.selected_average_score("Georgia", "2018-12") %></td>
+      <td class="green"><%= @survey.selected_average_score("Georgia", "2018") %></td>
+    </tr>
+    <tr>
+      <td class="box-background-color">Boston</td>
+      <td class="green"><%= @survey.selected_average_score("Boston", "2018-01") %></td>
+      <td class="green"><%= @survey.selected_average_score("Boston", "2018-02") %></td>
+      <td class="green"><%= @survey.selected_average_score("Boston", "2018-03") %></td>
+      <td class="green"><%= @survey.selected_average_score("Boston", "2018-04") %></td>
+      <td class="green"><%= @survey.selected_average_score("Boston", "2018-05") %></td>
+      <td class="green"><%= @survey.selected_average_score("Boston", "2018-06") %></td>
+      <td class="green"><%= @survey.selected_average_score("Boston", "2018-07") %></td>
+      <td class="green"><%= @survey.selected_average_score("Boston", "2018-08") %></td>
+      <td class="yellow"><%= @survey.selected_average_score("Boston", "2018-09") %></td>
+      <td class="green"><%= @survey.selected_average_score("Boston", "2018-10") %></td>
+      <td class="green"><%= @survey.selected_average_score("Boston", "2018-11") %></td>
+      <td class="yellow"><%= @survey.selected_average_score("Boston", "2018-12") %></td>
+      <td class="green"><%= @survey.selected_average_score("Boston", "2018") %></td>
+    </tr>
+    <tr>
+      <td class="box-background-color">Chicago</td>
+      <td class="green"><%= @survey.selected_average_score("Chicago", "2018-01") %></td>
+      <td class="green"><%= @survey.selected_average_score("Chicago", "2018-02") %></td>
+      <td class="green"><%= @survey.selected_average_score("Chicago", "2018-03") %></td>
+      <td class="green"><%= @survey.selected_average_score("Chicago", "2018-04") %></td>
+      <td class="green"><%= @survey.selected_average_score("Chicago", "2018-05") %></td>
+      <td class="green"><%= @survey.selected_average_score("Chicago", "2018-06") %></td>
+      <td class="green"><%= @survey.selected_average_score("Chicago", "2018-07") %></td>
+      <td class="green"><%= @survey.selected_average_score("Chicago", "2018-08") %></td>
+      <td class="green"><%= @survey.selected_average_score("Chicago", "2018-09") %></td>
+      <td class="green"><%= @survey.selected_average_score("Chicago", "2018-10") %></td>
+      <td class="yellow"><%= @survey.selected_average_score("Chicago", "2018-11") %></td>
+      <td class="green"><%= @survey.selected_average_score("Chicago", "2018-12") %></td>
+      <td class="green"><%= @survey.selected_average_score("Chicago", "2018") %></td>
+    </tr>
+    <tr>
+      <td class="box-background-color">Seattle</td>
+      <td class="green"><%= @survey.selected_average_score("Seattle", "2018-01") %></td>
+      <td class="green"><%= @survey.selected_average_score("Seattle", "2018-02") %></td>
+      <td class="yellow"><%= @survey.selected_average_score("Seattle", "2018-03") %></td>
+      <td class="green"><%= @survey.selected_average_score("Seattle", "2018-04") %></td>
+      <td class="green"><%= @survey.selected_average_score("Seattle", "2018-05") %></td>
+      <td class="green"><%= @survey.selected_average_score("Seattle", "2018-06") %></td>
+      <td class="green"><%= @survey.selected_average_score("Seattle", "2018-07") %></td>
+      <td class="green"><%= @survey.selected_average_score("Seattle", "2018-08") %></td>
+      <td class="green"><%= @survey.selected_average_score("Seattle", "2018-09") %></td>
+      <td class="green"><%= @survey.selected_average_score("Seattle", "2018-10") %></td>
+      <td class="green"><%= @survey.selected_average_score("Seattle", "2018-11") %></td>
+      <td class="green"><%= @survey.selected_average_score("Seattle", "2018-12") %></td>
+      <td class="green"><%= @survey.selected_average_score("Seattle", "2018") %></td>
+    </tr>
+    <tr>
+      <td class="box-background-color">Richmond</td>
+      <td class="green"><%= @survey.selected_average_score("Richmond", "2018-01") %></td>
+      <td class="green"><%= @survey.selected_average_score("Richmond", "2018-02") %></td>
+      <td class="green"><%= @survey.selected_average_score("Richmond", "2018-03") %></td>
+      <td class="green"><%= @survey.selected_average_score("Richmond", "2018-04") %></td>
+      <td class="green"><%= @survey.selected_average_score("Richmond", "2018-05") %></td>
+      <td class="green"><%= @survey.selected_average_score("Richmond", "2018-06") %></td>
+      <td class="green"><%= @survey.selected_average_score("Richmond", "2018-07") %></td>
+      <td class="green"><%= @survey.selected_average_score("Richmond", "2018-08") %></td>
+      <td class="green"><%= @survey.selected_average_score("Richmond", "2018-09") %></td>
+      <td class="green"><%= @survey.selected_average_score("Richmond", "2018-10") %></td>
+      <td class="green"><%= @survey.selected_average_score("Richmond", "2018-11") %></td>
+      <td class="green"><%= @survey.selected_average_score("Richmond", "2018-12") %></td>
+      <td class="green"><%= @survey.selected_average_score("Richmond", "2018") %></td>
+    </tr>
+    <tr>
+      <td class="box-background-color">Tulsa</td>
+      <td class="green"><%= @survey.selected_average_score("Tulsa", "2018-01") %></td>
+      <td class="green"><%= @survey.selected_average_score("Tulsa", "2018-02") %></td>
+      <td class="green"><%= @survey.selected_average_score("Tulsa", "2018-03") %></td>
+      <td class="green"><%= @survey.selected_average_score("Tulsa", "2018-04") %></td>
+      <td class="green"><%= @survey.selected_average_score("Tulsa", "2018-05") %></td>
+      <td class="green"><%= @survey.selected_average_score("Tulsa", "2018-06") %></td>
+      <td class="green"><%= @survey.selected_average_score("Tulsa", "2018-07") %></td>
+      <td class="green"><%= @survey.selected_average_score("Tulsa", "2018-08") %></td>
+      <td class="green"><%= @survey.selected_average_score("Tulsa", "2018-09") %></td>
+      <td class="green"><%= @survey.selected_average_score("Tulsa", "2018-10") %></td>
+      <td class="green"><%= @survey.selected_average_score("Tulsa", "2018-11") %></td>
+      <td class="green"><%= @survey.selected_average_score("Tulsa", "2018-12") %></td>
+      <td class="green"><%= @survey.selected_average_score("Tulsa", "2018") %></td>
+    </tr>
+    <tr>
+      <td class="box-background-color">Phoenix</td>
+      <td class="green"><%= @survey.selected_average_score("Phoenix", "2018-01") %></td>
+      <td class="green"><%= @survey.selected_average_score("Phoenix", "2018-02") %></td>
+      <td class="green"><%= @survey.selected_average_score("Phoenix", "2018-03") %></td>
+      <td class="green"><%= @survey.selected_average_score("Phoenix", "2018-04") %></td>
+      <td class="green"><%= @survey.selected_average_score("Phoenix", "2018-05") %></td>
+      <td class="green"><%= @survey.selected_average_score("Phoenix", "2018-06") %></td>
+      <td class="green"><%= @survey.selected_average_score("Phoenix", "2018-07") %></td>
+      <td class="green"><%= @survey.selected_average_score("Phoenix", "2018-08") %></td>
+      <td class="green"><%= @survey.selected_average_score("Phoenix", "2018-09") %></td>
+      <td class="green"><%= @survey.selected_average_score("Phoenix", "2018-10") %></td>
+      <td class="green"><%= @survey.selected_average_score("Phoenix", "2018-11") %></td>
+      <td class="green"><%= @survey.selected_average_score("Phoenix", "2018-12") %></td>
+      <td class="green"><%= @survey.selected_average_score("Phoenix", "2018") %></td>
+    </tr>
+    <tr>
+      <td class="box-background-color">North Carolina</td>
+      <td class="yellow"><%= @survey.selected_average_score("North Carolina", "2018-01") %></td>
+      <td class="yellow"><%= @survey.selected_average_score("North Carolina", "2018-02") %></td>
+      <td class="green"><%= @survey.selected_average_score("North Carolina", "2018-03") %></td>
+      <td class="yellow"><%= @survey.selected_average_score("North Carolina", "2018-04") %></td>
+      <td class="green"><%= @survey.selected_average_score("North Carolina", "2018-05") %></td>
+      <td class="yellow"><%= @survey.selected_average_score("North Carolina", "2018-06") %></td>
+      <td class="yellow"><%= @survey.selected_average_score("North Carolina", "2018-07") %></td>
+      <td class="yellow"><%= @survey.selected_average_score("North Carolina", "2018-08") %></td>
+      <td class="green"><%= @survey.selected_average_score("North Carolina", "2018-09") %></td>
+      <td class="green"><%= @survey.selected_average_score("North Carolina", "2018-10") %></td>
+      <td class="green"><%= @survey.selected_average_score("North Carolina", "2018-11") %></td>
+      <td class="green"><%= @survey.selected_average_score("North Carolina", "2018-12") %></td>
+      <td class="green"><%= @survey.selected_average_score("North Carolina", "2018") %></td>
+    </tr>
+    <tr>
+      <td class="box-background-color">Kansas</td>
+      <td class="yellow"><%= @survey.selected_average_score("Kansas", "2018-01") %></td>
+      <td class="yellow"><%= @survey.selected_average_score("Kansas", "2018-02") %></td>
+      <td class="green"><%= @survey.selected_average_score("Kansas", "2018-03") %></td>
+      <td class="yellow"><%= @survey.selected_average_score("Kansas", "2018-04") %></td>
+      <td class="red"><%= @survey.selected_average_score("Kansas", "2018-05") %></td>
+      <td class="yellow"><%= @survey.selected_average_score("Kansas", "2018-06") %></td>
+      <td class="red"><%= @survey.selected_average_score("Kansas", "2018-07") %></td>
+      <td class="yellow"><%= @survey.selected_average_score("Kansas", "2018-08") %></td>
+      <td class="red"><%= @survey.selected_average_score("Kansas", "2018-09") %></td>
+      <td class="yellow"><%= @survey.selected_average_score("Kansas", "2018-10") %></td>
+      <td class="green"><%= @survey.selected_average_score("Kansas", "2018-11") %></td>
+      <td class="green"><%= @survey.selected_average_score("Kansas", "2018-12") %></td>
+      <td class="yellow"><%= @survey.selected_average_score("Kansas", "2018") %></td>
+    </tr>
+  </table>
 </body>
-</html>
