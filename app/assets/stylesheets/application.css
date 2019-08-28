@@ -13,3 +13,35 @@
  *= require_tree .
  *= require_self
  */
+ body {
+   margin: 40px;
+ }
+
+table, th, td {
+  border: 1px solid black;
+  border-collapse: collapse;
+}
+th, td {
+  padding: 5px;
+  text-align: center;
+}
+
+.yellow {
+  background-color: yellow;
+}
+
+.green {
+  background-color: green;
+}
+
+.red {
+  background-color: red;
+}
+
+.background-color-main {
+  background-color: #e9eef1;
+}
+
+.box-background-color {
+  background-color: white;
+}

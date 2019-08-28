@@ -24,4 +24,9 @@ class Survey < ApplicationRecord
                 :would_use_again, :would_recommend)
     c = (b.flatten.sum / a.count.to_f).round(2)
   end
+
+  def self.location_plucker
+    pluck(:location).uniq
+  end
+
 end
